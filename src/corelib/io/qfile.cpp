@@ -911,7 +911,7 @@ QFile::copy(const QString &newName)
 
                     if (!error) {
                         // Sync to disk if possible. Ignore errors (e.g. not supported).
-                        out.d_func()->fileEngine->syncToDisk();
+                        d->fileEngine->syncToDisk();
 
                         if (!out.rename(newName)) {
                             error = true;
